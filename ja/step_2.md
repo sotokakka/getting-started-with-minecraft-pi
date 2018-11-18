@@ -1,4 +1,4 @@
-## What you will need
+## あなたが必要とするもの
 
 
 
@@ -6,18 +6,18 @@
 
 #### Software installation
 
-Minecraft has been installed by default in Raspbian since September 2014.
+Minecraftは、2014年9月以降、Raspbianにデフォルトでインストールされています。
 
 ![Minecraft Pi desktop icon](images/minecraft-pi-shortcut.png)
 
-If you're using an older version of Raspbian, open a terminal window and type the following commands (you must be online):
+古いバージョンのRaspbianを使用している場合は、ターミナルウィンドウを開き、次のコマンドを入力します（オンラインにする必要があります）。
 
 ```bash
 sudo apt-get update
 sudo apt-get install minecraft-pi
 ```
 
-Once that finishes, Minecraft Pi and the Python library should be installed.
+それが終わったら、Minecraft PiとPythonライブラリをインストールする必要があります。
 
 #### Test Minecraft
 
@@ -25,21 +25,21 @@ To run Minecraft double click the desktop icon or enter `minecraft-pi` in the te
 
 ![](images/mcpi-start.png)
 
-When Minecraft Pi has loaded, click on **Start Game**, followed by **Create new**. You'll notice that the containing window is offset slightly. This means to drag the window around you have to grab the title bar behind the Minecraft window.
+Minecraft Piがロードされたら、** Start Game **をクリックし、** New create **をクリックします。ウィンドウを含むウィンドウがわずかにオフセットされていることがわかります。これは、あなたがMinecraftウィンドウの後ろのタイトルバーをつかむ必要があるウィンドウをドラッグすることを意味します。
 
 ![](images/mcpi-game.png)
 
-You are now in a game of Minecraft!
+あなたは今、Minecraftのゲームに入っています！
 
 #### Test Python
 
-With Minecraft running, and the world created, bring your focus away from the game by pressing the `Tab` key, which will free your mouse. Open Python 3 (IDLE) on the Desktop and move the windows so they're side-by-side.
+Minecraftが走って世界が創り出されたら、あなたのマウスを解放する `Tab`キーを押して、あなたの焦点をゲームから遠ざけてください。デスクトップ上でPython 3（IDLE）を開き、ウィンドウが並んでいるように移動します。
 
-You can either type commands directly in to the Python window or create a file so you can save your code and run it again another time.
+Pythonウィンドウに直接コマンドを入力するか、ファイルを作成してコードを保存してもう一度実行することができます。
 
-If you want create a file go to `File > New window` and `File > Save`. You'll probably want to save this in your home folder or a new project folder.
+ファイルを作成したい場合は、 `File> New window`と` File> Save`に行きます。ホームフォルダまたは新しいプロジェクトフォルダに保存することをお勧めします。
 
-Start by importing the Minecraft library, creating a connection to the game and testing it by posting the message "Hello world" to the screen:
+まず、Minecraftライブラリをインポートし、ゲームへの接続を作成し、画面に「Hello world」というメッセージをポストしてテストします。
 
 ```python
 from mcpi import minecraft
@@ -49,8 +49,8 @@ mc = minecraft.Minecraft.create()
 mc.postToChat("Hello world")
 ```
 
-If you're entering commands directly in to the Python window, just hit `Enter` after each line. If it's a file, save with `Ctrl + S` and run with `F5`. When your code runs, you should see your message on screen in the game.
+コマンドをPythonウィンドウに直接入力する場合は、各行の後に `Enter`を打ちます。ファイルの場合は `Ctrl + S 'で保存し、` F5`で実行してください。コードが実行されると、ゲームの画面にメッセージが表示されます。
 
 ![](images/mcpi-idle.png)
 
-If you see "Hello world" in the Minecraft window, you're good to proceed to the next step.
+Minecraftウィンドウで「Hello world」が表示されたら、次のステップに進むとよいでしょう。
